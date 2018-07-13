@@ -1,0 +1,52 @@
+server:
+  port: 8060
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000  
+
+
+zuul:
+  ignoredServices: '*'
+  routes:       
+    service-a:
+      path: /sa/**
+      sensitiveHeaders:
+    service-b:
+      path: /sb/**
+      sensitiveHeaders:
+    service-c:
+      path: /sc/**
+      sensitiveHeaders:      
+    service-d:
+      path: /sd/**
+      sensitiveHeaders:     
+    service-e:
+      path: /se/**
+      sensitiveHeaders:           
+    service-f:
+      path: /sf/**
+      sensitiveHeaders:         
+    service-g:
+      path: /sg/**
+      sensitiveHeaders:       
+      
+    service-x:
+      path: /sx/**
+      sensitiveHeaders:
+    
+    emotion:
+      path: /emotion/**
+      sensitiveHeaders:
+    tk:
+      path: /getToken/**
+      url: forward:/getToken
+
