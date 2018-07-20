@@ -25,27 +25,19 @@ zuul:
       sensitiveHeaders:
     service-c:
       path: /sc/**
-      sensitiveHeaders:      
-    service-d:
-      path: /sd/**
-      sensitiveHeaders:     
-    service-e:
-      path: /se/**
-      sensitiveHeaders:           
-    service-f:
-      path: /sf/**
-      sensitiveHeaders:         
-    service-g:
-      path: /sg/**
-      sensitiveHeaders:       
-      
+      sensitiveHeaders:
     service-x:
       path: /sx/**
       sensitiveHeaders:
     
-    emotion:
-      path: /emotion/**
-      sensitiveHeaders:
+    sv-emotion:
+      path: /sv-emotion/**
+      sensitiveHeaders:     
+    
+    sv-tts:
+      path: /sv-tts/**
+      sensitiveHeaders: 
+
     tk:
       path: /getToken/**
       url: forward:/getToken

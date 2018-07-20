@@ -1,0 +1,14 @@
+server:
+  port: 9004 
+
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+
+security:
+  user:
+    name: user
+    password: password
+
