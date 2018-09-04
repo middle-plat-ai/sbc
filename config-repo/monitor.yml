@@ -20,7 +20,7 @@ management:
         allowed-methods: "*"
 
 turbine:
-  app-config: service-a,service-b,service-c,service-x,sv-tts,sv-emotion
+  app-config: sv-asr,sv-qc,sv-tts,sv-emotion
   aggregator:
     clusterConfig: default
   clusterNameExpression: new String("default")
