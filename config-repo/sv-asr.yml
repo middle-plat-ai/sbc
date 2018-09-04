@@ -1,6 +1,6 @@
 spring:
   zipkin:
-    base-url: http://zipkin-server:9411
+    base-url: http://zipkin:9411
     service: 
       name: ${spring.application.name}
     sleuth:
@@ -16,4 +16,4 @@ server:
 eureka: 
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://registry:8761/eureka/
