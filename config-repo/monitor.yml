@@ -1,0 +1,31 @@
+spring:
+  rabbitmq:
+    host: rabbitmq
+
+server:
+  port: 8040
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
+turbine:
+  app-config: service-a,service-b,service-c,service-x,sv-tts,sv-emotion
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream     
+
+
