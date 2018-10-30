@@ -31,6 +31,9 @@ zuul:
     sv-qc:
       path: /sb/**
       sensitiveHeaders:
+    sv-sre:
+      path: /sre/**
+      sensitiveHeaders:
     service-c:
       path: /sc/**
       sensitiveHeaders:
