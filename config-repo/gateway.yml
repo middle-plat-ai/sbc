@@ -34,10 +34,10 @@ zuul:
     sv-sre:
       path: /sre/**
       sensitiveHeaders:
-    service-c:
-      path: /sc/**
+    sv-qclient:
+      path: /qclient/**
       sensitiveHeaders:
-    service-x:
+    sv-x:
       path: /sx/**
       sensitiveHeaders:
     
