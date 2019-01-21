@@ -1,0 +1,19 @@
+spring:
+  zipkin:
+    base-url: http://zipkin:9411
+    service: 
+      name: ${spring.application.name}
+    sleuth:
+      enable: ture
+      sampler:
+      percentage: 1
+  rabbitmq:
+    host: rabbitmq
+
+server:
+  port: 9008
+
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
