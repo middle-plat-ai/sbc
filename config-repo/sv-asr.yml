@@ -11,7 +11,7 @@ spring:
     host: rabbitmq
 
 server:
-  port: 9007
+  port: 9
   
 management:
   context-path=/
