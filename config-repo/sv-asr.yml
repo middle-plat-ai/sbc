@@ -12,6 +12,9 @@ spring:
 
 server:
   port: 9007
+  
+management:
+  context-path=/
 
 eureka: 
   client:
