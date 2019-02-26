@@ -11,10 +11,7 @@ spring:
     host: rabbitmq
 
 server:
-  port: 9107
-  
-management:
-  context-path=/
+  port: 9007
 
 eureka: 
   client:
