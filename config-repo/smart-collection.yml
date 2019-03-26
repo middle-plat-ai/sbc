@@ -1,6 +1,3 @@
-server:
-  port: 9008
-  
 eureka:
   instance:
     metadata-map:
