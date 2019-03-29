@@ -49,6 +49,10 @@ zuul:
       path: /sv-tts/**
       sensitiveHeaders: 
 
+    smart-collection:
+      path: /sv-sc/**
+      sensitiveHeaders:
+      
     tk:
       path: /getToken/**
       url: forward:/getToken
