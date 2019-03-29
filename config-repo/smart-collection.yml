@@ -1,10 +1,19 @@
-eureka:
-  instance:
-    metadata-map:
-      user.name: ${security.user.name}
-      user.password: ${security.user.password}
+spring:
+  zipkin:
+    base-url: http://zipkin:9411
+    service: 
+      name: ${spring.application.name}
+    sleuth:
+      enable: ture
+      sampler:
+      percentage: 1
+  rabbitmq:
+    host: rabbitmq
 
-security:
-  user:
-    name: user
-    password: password
+server:
+  port: 9015
+
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
