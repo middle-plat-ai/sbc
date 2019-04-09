@@ -8,11 +8,10 @@ eureka:
 
 hystrix:
   command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 10000
+      default:
+        execution:
+          timeout:
+            enabled: false
 
 ribbon:
   ReadTimeout: 15000
