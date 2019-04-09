@@ -15,8 +15,8 @@ hystrix:
             timeoutInMilliseconds: 10000
 
 ribbon:
-  ReadTimeout: 5000
-  ConnectTimeout: 5000
+  ReadTimeout: 15000
+  ConnectTimeout: 15000
 
 spring:
   rabbitmq:
