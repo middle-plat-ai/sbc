@@ -1,7 +1,4 @@
 spring:
-  application:
-    name: smart-collection
-    
   zipkin:
     base-url: http://zipkin:9411
     service: 
@@ -12,36 +9,7 @@ spring:
       percentage: 1
   rabbitmq:
     host: rabbitmq
-    
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-    default-property-inclusion: non_null
-
-  datasource:
-    url: jdbc:mysql://mysql:3306/nlu?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-  data:
-    elasticsearch:
-      cluster-name: niwodai
-      cluster-nodes: es:9300
-      repositories:
-        enabled: true
-
-  redis:
-    password: niwodai123
-    cluster:
-      nodes: redis:7001,redis:7002,redis:7003,redis:7004,redis:7005,redis:7006
-
-  http:
-    encoding:
-      charset: utf-8
-      enabled: true
-      force: true
-
+  
 eureka: 
   client:
     serviceUrl:
@@ -49,27 +17,3 @@ eureka:
 
 server:
   port： 9015
-  servlet:
-    context-path: /smart-collection
-
-
-mybatis:
-  mapper-locations: classpath*:mybatis/mapper/*.xml
-  config-location: classpath:mybatis/mybatis-config.xml
-  type-aliases-package: com.niwodai.smart.entity
-
-expire:
-  time: 5
-
-nlp:
-  root: /opt
-  path: ${nlp.root}/data/nlp.properties
-  threshold:
-    es: 0.9 #添加修改
-    wv: 0.98 #添加修改
-  hanlp: ${nlp.root}/data/hanlp.properties
-  methods: pattern rasa default
-  vectorUrl: http://vector:8088/qa/query/vector #添加
-  ##respond: http://10.15.83.198:8400/responds
-  respond: http://rasa:8400/responds
-  parse: http://rasa:4000/intent
