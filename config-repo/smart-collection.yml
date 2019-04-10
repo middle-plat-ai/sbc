@@ -1,3 +1,5 @@
+server:
+  port： 9015
 spring:
   zipkin:
     base-url: http://zipkin:9411
@@ -15,5 +17,4 @@ eureka:
     serviceUrl:
       defaultZone: http://registry:8761/eureka/
 
-server:
-  port： 9015
+
